@@ -1,13 +1,13 @@
 {
-	  "name": "Notes",
-	  "scope": "./",
-	  "start_url": "index.html",
-	  "display": "standalone",
-	  "orientation": "any",
-	  "theme_color": "#67C7B9",
-	  "background_color": "#67C7B9",
+  "name": "Notes",
+  "scope": "./",
+  "start_url": "index.html",
+  "display": "standalone",
+  "orientation": "any",
+  "theme_color": "#9C27B0",
+  "background_color": "#9C27B0",
 
-	  "icons": [{
+   "icons": [{
     "src": "bower_components/note-app/common/images/icon-0-75x.png",
     "sizes": "36x36",
     "type": "image/png",
@@ -43,5 +43,4 @@
     "type": "image/png",
     "density": 4.0
   }]
-}
 }

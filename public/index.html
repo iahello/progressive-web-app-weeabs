@@ -8,7 +8,9 @@
     <!-- Older Chrome configuration -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Notes">
-    <link rel="icon" sizes="192x192" href="bower_components/note-app/common/images/icon-4x.png">
+    <link rel="icon" 
+          sizes="192x192" 
+          href="bower_components/note-app/common/images/icon-4x.png">
     <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
     <script src="bower_components/web-animations-js/web-animations.min.js"></script>
     <link rel="import" href="bower_components/platinum-sw/platinum-sw-elements.html">
@@ -17,26 +19,29 @@
     <style>
       body {
         margin: 0;
+        background-color: red;
       }
     </style>
   </head>
   <body>
     <platinum-sw-register
-      auto-register
-      skip-waiting
-      clients-claim
-      reload-on-install
-      href="sw-import.js">
+        auto-register
+        skip-waiting
+        clients-claim
+        reload-on-install
+        href="sw-import.js">
       <platinum-sw-cache
-        default-cache-strategy="networkFirst">
+          default-cache-strategy="networkFirst">
       </platinum-sw-cache>
+          <firebase-app 
+            name="WeeaBS"
+            api-key= "AIzaSyCqbGtcyLR9xuD3lYgmqKMYE2ZFbN8nn_4"
+            auth-domain= "weeabs-50692.firebaseapp.com"
+            database-url= "https://weeabs-50692.firebaseio.com">
+          </firebase-app>
+          <note-app></note-app>
     </platinum-sw-register>
-    <firebase-app 
-      name="WeeaBS"
-      api-key= "AIzaSyCqbGtcyLR9xuD3lYgmqKMYE2ZFbN8nn_4"
-      auth-domain= "weeabs-50692.firebaseapp.com"
-      database-url= "https://weeabs-50692.firebaseio.com">
-    </firebase-app>
-    <note-app></note-app>
+
+    
   </body>
 </html>
