@@ -5,12 +5,19 @@
 <dom-module id="note-app">
   <template>
     <style include="note-app-shared-styles"></style>
-    <na-toolbar></na-toolbar>
-    <na-login></na-login>
+      <na-toolbar
+        signed-in="[[signedIn]]"
+        on-sign-out="signOut">
+      </na-toolbar>
+      <na-login
+        on-sign-in="signIn"
+        signed-in="[[signedIn]]"
+        disabled="[[!online]]">
+      </na-login>
   </template>
   <script>
     Polymer({
-      is: 'weeabs'
+      is: 'note-app'
     });
   </script>
 </dom-module>

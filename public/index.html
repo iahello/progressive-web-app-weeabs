@@ -4,6 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
     <title>WeeaBS</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: red;
+      }
+    </style>
     <link rel="manifest" href="manifest.json">
     <!-- Older Chrome configuration -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -16,12 +22,6 @@
     <link rel="import" href="bower_components/platinum-sw/platinum-sw-elements.html">
     <link rel="import" href="bower_components/polymerfire/firebase-app.html">
     <link rel="import" href="note-app.html">
-    <style>
-      body {
-        margin: 0;
-        background-color: red;
-      }
-    </style>
   </head>
   <body>
     <platinum-sw-register
@@ -33,15 +33,13 @@
       <platinum-sw-cache
           default-cache-strategy="networkFirst">
       </platinum-sw-cache>
-          <firebase-app 
-            name="WeeaBS"
-            api-key= "AIzaSyCqbGtcyLR9xuD3lYgmqKMYE2ZFbN8nn_4"
-            auth-domain= "weeabs-50692.firebaseapp.com"
-            database-url= "https://weeabs-50692.firebaseio.com">
-          </firebase-app>
-          <note-app></note-app>
     </platinum-sw-register>
-
-    
+    <firebase-app 
+      name="WeeaBS"
+      api-key= "AIzaSyCqbGtcyLR9xuD3lYgmqKMYE2ZFbN8nn_4"
+      auth-domain= "weeabs-50692.firebaseapp.com"
+      database-url= "https://weeabs-50692.firebaseio.com">
+    </firebase-app>
+    <note-app></note-app>
   </body>
 </html>
