@@ -14,10 +14,23 @@
         signed-in="[[signedIn]]"
         disabled="[[!online]]">
       </na-login>
+      <firebase-auth
+        id="auth"
+        app-name="WeeaBS"
+        provider="google"
+        signed-in="{{signedIn}}"
+        user="{{user}}">
+      </firebase-auth>
   </template>
-  <script>
-    Polymer({
-      is: 'note-app'
-    });
-  </script>
+<script>
+  Polymer({
+    is: 'note-app',
+
+    behaviors: [Polymer.NoteAppBehavior],
+
+    signIn: function() {
+      this.$.auth.signInWithPopup();
+    }
+  });
+</script>
 </dom-module>
